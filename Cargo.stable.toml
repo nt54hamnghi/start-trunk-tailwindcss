@@ -18,15 +18,22 @@ console_error_panic_hook = "0.1"
 # strum = { version = "0.25", features = ["derive", "strum_macros"] }
 # strum_macros = "0.25"
 
-
 [dev-dependencies]
 wasm-bindgen = "0.2"
 wasm-bindgen-test = "0.3"
 web-sys = { version = "0.3", features = ["Document", "Window"] }
-
 
 [profile.release]
 opt-level = 'z'
 lto = true
 codegen-units = 1
 panic = "abort"
+
+[lints.rust]
+unsafe_code = { priority = 5, level = "forbid" }
+# unused = { priority = -1, level = "allow" }
+
+[lints.clippy]
+all = { priority = -1, level = "deny" }
+pedantic = { priority = -1, level = "allow" }
+restriction = { priority = -1, level = "allow" }
