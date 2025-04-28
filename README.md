@@ -19,7 +19,7 @@ cargo install cargo-generate trunk leptosfmt
 To set up your project with this template, run
 
 ```sh
-cargo generate --git https://github.com/leptos-community/start-csr
+cargo generate --git https://github.com/nt54hamnghi/start-trunk-tailwindcss
 ```
 
 to generate your new project, then
